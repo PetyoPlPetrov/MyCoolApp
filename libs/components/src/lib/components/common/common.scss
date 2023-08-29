@@ -1,9 +1,11 @@
 /* Base Typography */
 
-  @mixin global-styles {
-      font-family: 'Helvetica', sans-serif;
-      font-size: 14px;
-      line-height: 1.5;    
-  
-    // Add other global styles here
-  }
+@mixin global-styles {
+  box-sizing: border-box;
+
+  font-family: 'Helvetica', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+
+  // Add other global styles here
+}

@@ -1,15 +1,43 @@
-import { Layout,Card, CardProps } from 'libs/components';
+import { Card, CardProps, Layout } from 'libs/components';
 import styles from './index.module.scss';
 const people = [
   {
-    name: "Cameron Wilson" ,
-    email: "c@company.emil",
-    dateOfBirth: "5/6/1992",
-    address: "4140 parker Avenu, New York",
-    phone: "(889)-906-1960",
-    password: "MyPass"
-  }
-] as CardProps[]
+    name: 'Cameron Wilson',
+    email: 'c@company.emil',
+    dateOfBirth: '5/6/1992',
+    address: '4140 parker Avenu, New York',
+    phone: '(889)-906-1960',
+    password: 'MyPass',
+    imageProps: {
+      imageUrl: "/person.jpg",
+       alt: "some employee"
+    },
+  },
+  {
+    name: 'Cameron Wilson2',
+    email: 'c@company.emil',
+    dateOfBirth: '5/6/1992',
+    address: '4140 parker Avenu, New York',
+    phone: '(889)-906-1960',
+    password: 'MyPass',
+    imageProps: {
+      imageUrl: "/person.jpg",
+       alt: "some employee"
+    },
+  },
+  {
+    name: 'Cameron Wilson3',
+    email: 'c@company.emil',
+    dateOfBirth: '5/6/1992',
+    address: '4140 parker Avenu, New York',
+    phone: '(889)-906-1960',
+    password: 'MyPass',
+    imageProps: {
+      imageUrl: "/person.jpg",
+       alt: "some employee"
+    },
+  },
+] as CardProps[];
 
 export function Index() {
   /*
@@ -20,19 +48,11 @@ export function Index() {
   return (
     <div className={styles.page}>
       <div className="wrapper">
-        <div className="container">
-          <div id="welcome">
-            <h1>
-              <span> Hello there, </span>
-              Welcome app 👋
               <Layout>
-                  {people.map(p=><Card {...p}/>)}
+                {people.map((p) => (
+                  <Card key={p.name} {...p} />
+                ))}
               </Layout>
-            </h1>
-          </div>
-
-        
-        </div>
       </div>
     </div>
   );

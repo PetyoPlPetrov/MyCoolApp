@@ -8,7 +8,10 @@ interface ButtonProps {
   children?: any;
 }
 
-
 export const Button = (props: ButtonProps) => {
-  return <button className={st.button} {...props}>{props.text}</button>;
+  return (
+    <button className={st.button} {...props}>
+      {props.text}
+    </button>
+  );
 };

@@ -1,9 +1,13 @@
 @import '../../common/common.scss';
 
-.image{
-    @include global-styles;
+.image {
+  @include global-styles;
+  
+  border-radius: 50%;
+  height: max-content;
+  width: 115px;
+  height: 115px;
+  background-color: aliceblue;
+  padding: 1rem;
 
-    border-radius: '50%';
-    width: '150px';
-    height: '150px';
 }

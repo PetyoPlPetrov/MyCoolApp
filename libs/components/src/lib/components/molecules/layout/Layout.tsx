@@ -1,16 +1,12 @@
-
 import React from 'react';
-import styles from './layout.modules.scss';
+import styles from './layout.module.scss';
 
 import { CardProps } from '../card/Card';
 
 interface LayoutProps {
-    children:  React.ReactElement<CardProps>[];
+  children: React.ReactElement<CardProps>[];
 }
 
-export const Layout = ({children}: LayoutProps)=>{
-
-    return <div className={styles.wrapper}>
-        {children}
-    </div>
-}
+export const Layout = ({ children }: LayoutProps) => {
+  return <div className={styles.wrapper}>{children}</div>;
+};

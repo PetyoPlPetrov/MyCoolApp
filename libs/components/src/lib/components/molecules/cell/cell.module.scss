@@ -1,0 +1,27 @@
+@import '../../common/common.scss';
+
+.headerText {
+  @include global-styles;
+  font-weight: 600
+
+}
+.footerText {
+  @include global-styles;
+  opacity: 0.5;
+
+}
+.wrapper {
+  @include global-styles;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  width: max-content;
+  min-height: 135px;
+
+
+
+}
