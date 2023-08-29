@@ -6,6 +6,5 @@ export interface ImageProps {
 }
 
 export const Image = ({ imageUrl, alt }: ImageProps) => {
-  return <div className={`${styles.image}`}></div>
   return <img src={imageUrl} alt={alt} className={`${styles.image}`} />;
 };

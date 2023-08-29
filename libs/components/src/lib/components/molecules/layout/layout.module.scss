@@ -2,6 +2,15 @@
 
 .wrapper {
   @include global-styles;
-  
-padding: 2rem;
+
+  padding: 2rem;
+}
+@media (max-width: 600px) {
+  .wrapper {
+    background-color: #e8e1e1;
+    padding: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }

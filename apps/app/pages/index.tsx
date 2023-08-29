@@ -1,5 +1,6 @@
 import { Card, CardProps, Layout } from 'libs/components';
 import styles from './index.module.scss';
+
 const people = [
   {
     name: 'Cameron Wilson',
@@ -9,8 +10,8 @@ const people = [
     phone: '(889)-906-1960',
     password: 'MyPass',
     imageProps: {
-      imageUrl: "/person.jpg",
-       alt: "some employee"
+      imageUrl: '/person.jpeg',
+      alt: 'some employee',
     },
   },
   {
@@ -21,8 +22,8 @@ const people = [
     phone: '(889)-906-1960',
     password: 'MyPass',
     imageProps: {
-      imageUrl: "/person.jpg",
-       alt: "some employee"
+      imageUrl: '/person.jpeg',
+      alt: 'some employee',
     },
   },
   {
@@ -33,8 +34,8 @@ const people = [
     phone: '(889)-906-1960',
     password: 'MyPass',
     imageProps: {
-      imageUrl: "/person.jpg",
-       alt: "some employee"
+      imageUrl: '/person.jpeg',
+      alt: 'some employee',
     },
   },
 ] as CardProps[];
@@ -48,11 +49,11 @@ export function Index() {
   return (
     <div className={styles.page}>
       <div className="wrapper">
-              <Layout>
-                {people.map((p) => (
-                  <Card key={p.name} {...p} />
-                ))}
-              </Layout>
+        <Layout>
+          {people.map((person) => (
+            <Card key={person.name} {...person} />
+          ))}
+        </Layout>
       </div>
     </div>
   );

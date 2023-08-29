@@ -2,13 +2,11 @@
 
 .headerText {
   @include global-styles;
-  font-weight: 600
-
+  font-weight: 600;
 }
 .footerText {
   @include global-styles;
   opacity: 0.5;
-
 }
 .wrapper {
   @include global-styles;
@@ -17,11 +15,8 @@
   flex-direction: column;
   gap: 0.4rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: max-content;
   width: max-content;
   min-height: 135px;
-
-
-
 }
