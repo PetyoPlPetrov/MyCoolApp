@@ -1,0 +1,8 @@
+@import '../../common/common.scss';
+
+
+.divider{
+    @include global-styles;
+
+    background-color: aqua;
+}

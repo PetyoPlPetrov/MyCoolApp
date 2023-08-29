@@ -1,4 +1,8 @@
+@import '../../common/common.scss';
+
 .input{
+    @include global-styles;
+
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;

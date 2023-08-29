@@ -1,0 +1,21 @@
+
+@import '../../common/common.scss';
+
+.headerText{
+    @include global-styles;
+
+    color: red
+}
+.footerText{
+    @include global-styles;
+
+    color: blue
+
+}
+.wrapper{
+    @include global-styles;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}

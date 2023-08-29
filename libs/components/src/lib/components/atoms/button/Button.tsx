@@ -1,4 +1,4 @@
-import st from './m.module.scss';
+import st from './button.module.scss';
 
 interface ButtonProps {
   /*Chanhe the background color of the button */
