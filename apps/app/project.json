@@ -1,11 +1,11 @@
 {
-  "name": "apps-app",
+  "name": "app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "./apps/app/src",
+  "sourceRoot": "apps/app",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/vite:build",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -13,64 +13,54 @@
       },
       "configurations": {
         "development": {
-          "mode": "development"
+          "outputPath": "apps/app"
         },
-        "production": {
-          "mode": "production"
-        }
+        "production": {}
       }
     },
     "serve": {
-      "executor": "@nx/vite:dev-server",
+      "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "apps-app:build"
+        "buildTarget": "app:build",
+        "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "apps-app:build:development",
-          "hmr": true
+          "buildTarget": "app:build:development",
+          "dev": true
         },
         "production": {
-          "buildTarget": "apps-app:build:production",
-          "hmr": false
+          "buildTarget": "app:build:production",
+          "dev": false
         }
       }
     },
-    "preview": {
-      "executor": "@nx/vite:preview-server",
-      "defaultConfiguration": "development",
+    "export": {
+      "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "apps-app:build"
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "apps-app:build:development"
-        },
-        "production": {
-          "buildTarget": "apps-app:build:production"
-        }
+        "buildTarget": "app:build:production"
       }
     },
     "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["coverage/apps/app"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/app"
+        "jestConfig": "apps/app/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["./apps/app/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "serve-static": {
-      "executor": "@nx/web:file-server",
-      "options": {
-        "buildTarget": "apps-app:build"
+        "lintFilePatterns": ["apps/app/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

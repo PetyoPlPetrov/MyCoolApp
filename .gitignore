@@ -2,3 +2,6 @@
 .nx/installation
 .nx/cache
 node_modules
+
+# Next.js
+.next
