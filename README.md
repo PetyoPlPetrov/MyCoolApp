@@ -8,12 +8,12 @@ Entry point for the project: apps/app
 App contains the FileManager whereas the libs contains th building blocks, reusable components and behaviour.
 
 - apps
-  app -
-  app-e2e -
-  storybook with a small setup for custom tab
+    app -
+    app-e2e -
+    storybook with a small setup for custom tab
   -libs
-  -aws-services -main services for auth and crud operations
-  -components
-  -atoms
-  -molecules
-  -organismes
+    -aws-services -main services for auth and crud operations
+    -components
+        -atoms
+        -molecules
+        -organismes

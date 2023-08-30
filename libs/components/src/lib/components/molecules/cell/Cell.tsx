@@ -6,7 +6,7 @@ export interface CellProps {
   footerText: string;
   className?: string;
 }
-export const Cell = ({className,  headerText, footerText }: CellProps) => {
+export const Cell = ({ className, headerText, footerText }: CellProps) => {
   return (
     <div className={`${styles.wrapper} ${className}`}>
       <div className={styles.headerText}>{headerText}</div>

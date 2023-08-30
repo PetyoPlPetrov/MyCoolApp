@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "nx run app:serve",
-    "format": "nx format:write",
+    "format": "nx format:write --libs-and-apps",
     "storybook": "nx run storybook:storybook"
   },
   "dependencies": {
